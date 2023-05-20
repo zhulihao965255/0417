@@ -24,7 +24,6 @@ div, p, body {
 #text {
     position: relative;
     top: 200px;
-    width: 100vw;
     color: bisque;
 }
 
