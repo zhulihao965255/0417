@@ -1,4 +1,29 @@
 
-h2 {
-    color: red;
+div, p, body {
+    margin: 0;
+    padding: 0;
 }
+#div1 {
+    height: 100vh;
+    text-align: center;
+    background: url('./image/1.jpg') no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+#p1{
+    color:sandybrown;
+}
+#nowtime {
+    /* margin-top: 24px; */
+    height: 24px;
+    padding-top: 8px;
+}
+#img {
+    position: relative;
+    top: 128px;
+}
+#text {
+    position: relative;
+    top: 200px;
+}
+
