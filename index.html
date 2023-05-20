@@ -1,16 +1,53 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/3.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <title>ToZHOUQUN</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7/dayjs.min.js" integrity="sha512-hcV6DX35BKgiTiWYrJgPbu3FxS6CsCjKgmrsPRpUPkXWbvPiKxvSVSdhWX0yXcPctOI2FJ4WP6N1zH+17B/sAA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="main.js"></script>
  </head>
 <body>
-    <h2>2020-04-17</h2>
+    <div id="div1">
+        <p id="p1">始于2020-04-17</p>
+        <div id="nowtime"></div>
+        <img src="./image/2.jpeg" width="188" id="img" alt="">
+        <h2 id="text">520节日快乐</h2>
+    </div>
 </body>
+<script>
+    //页面加载调用
+    window.onload=function(){
+                //每1秒刷新时间
+              setInterval("NowTime()",1000);
+            }
+            function NowTime(){
+                //获取年月日
+                var time=new Date();
+                var year=time.getFullYear();
+                var month=time.getMonth() + 1;
+                var day=time.getDate();                
+                //获取时分秒
+                var h=time.getHours();
+                var m=time.getMinutes();
+                var s=time.getSeconds();
+                
+                //检查是否小于10
+                h=check(h);
+                m=check(m);
+                s=check(s);
+                document.getElementById("nowtime").innerHTML=year+"年"+month+"月"+day+"日  "+h+":"+m+":"+s;
+            }
+            //时间数字小于10，则在之前加个“0”补位。
+            function check(i){
+                //方法一，用三元运算符
+                var num;
+                i < 10 ? num = "0" + i : num = i;
+                return num;
+            }
+</script>
 </html>
+
